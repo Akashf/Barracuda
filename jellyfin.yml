@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+        jellyfin:
+                image: jellyfin/jellyfin
+                container_name: jellyfin
+                user: 1000:1000
+                network_mode: "host"
+                volumes:
+                        - /home/akash/jellyfin/config:/config
+                        - /home/akash/jellyfin/cache:/cache
+                        - /home/akash/media/movies:/media
+                        - /home/akash/media/shows:/media2:ro
+                restart: unless-stopped

@@ -1,0 +1,13 @@
+version: "3.2"
+services:
+  redbot:
+    container_name: redbot
+    image: phasecorex/red-discordbot
+    restart: unless-stopped
+    volumes:
+      - /home/akash/redbot:/data
+    environment:
+      - TOKEN=NjgxMTU1MzMyOTI3NzgyOTU2.GTsbhU.7pmWhHDWZqpZ45BJvZ2lzlcD84KEGsCCZsjhNg
+      - PREFIX=.
+      - TZ=Canada/Newfoundland
+      - PUID=1000
